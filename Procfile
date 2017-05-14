@@ -1,1 +1,1 @@
-web: ruby capp.rb
+web: ruby app.rb
