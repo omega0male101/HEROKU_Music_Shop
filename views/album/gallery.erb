@@ -1,0 +1,33 @@
+  
+<center>
+  <a class="button" href="http://localhost:4567/albums/gallery/title">LIST BY TITLE</a>
+  <a class="button" href="http://localhost:4567/albums/gallery/artist">LIST BY ARTIST</a>
+  <a class="button" href="http://localhost:4567/albums/gallery/stock">LIST BY STOCK</a>
+</center>
+
+
+<ul class="rig columns-3 ">
+
+  <% for album in @albums %>
+
+  <li>
+    <a href="/albums/<%= album.id%>/edit"><img src="<%= album.artwork()%>" /></a>
+
+    <h3><%= album.title()%></h3>
+
+    <div class="box-left"><%= album.artist().name %></div>
+    <div class="box-right"><%= album.quantity()%> in stock</div>
+  </li>
+
+  <% end %>
+
+</ul>
+
+<br/>
+  <center>
+    <a class="button" href="http://localhost:4567/artists/new">ADD ARTIST</a>
+    <a class="button" href="http://localhost:4567/albums">LIST VIEW</a>
+    <a class="button" href="http://localhost:4567/albums/new">ADD ALBUM</a>
+  </center>
+  
+<br/><br/>

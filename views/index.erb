@@ -1,0 +1,34 @@
+
+<div class="homepage_content">
+  <h1 class="blur_bold">We're running low, maybe buy some more?</h1>
+
+  
+  <center><p>
+  <div id="content">
+  <table class="album_table">
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Genre</th>
+      <th>Stock</th>
+    </tr>
+
+        <% for album in @albums %>
+    <tr>
+      <td class="table-indent"><%= album.title()%></td>
+      <td class="table-indent"><%= album.artist().name %></td>
+      <td><center><%= album.genre().type %></center></td>
+      <td><center><%= album.quantity()%></center></td>
+    </tr>
+        <% end %>
+  </table>
+
+  <p><strong class="p-font">You have sold <%=@total_sales%> albums this month.. and have <b><%=@current_stock%></b> left in stock.</strong></p>
+  <p><strong class="p-font">Your top selling album this month is the '<%= @top_seller%>' album.</strong></p>
+  </center>
+  </div>
+ 
+  
+</div>
+
+
